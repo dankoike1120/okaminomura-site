@@ -103,7 +103,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  let currentLang = 'ja';
+  /* ---------- LANGUAGE-AWARE LINKS ---------- */
+  const localizedLinks = {
+    mori: {
+      ja: 'https://okami-no-mori.netlify.app',
+      en: 'https://okami-no-mori.netlify.app/en'
+    }
+  };
+
+  /* ---------- AUTO-DETECT BROWSER LANGUAGE ---------- */
+  const browserLang = (navigator.language || navigator.userLanguage || 'ja').slice(0, 2);
+  let currentLang = browserLang === 'ja' ? 'ja' : 'en';
 
   function setLang(lang) {
     currentLang = lang;
@@ -115,7 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerHTML = t[key];
       }
     });
+    /* Update localized links */
+    document.querySelectorAll('[data-link]').forEach(el => {
+      const key = el.getAttribute('data-link');
+      if (localizedLinks[key] && localizedLinks[key][lang]) {
+        el.href = localizedLinks[key][lang];
+      }
+    });
   }
+
+  /* Apply initial language */
+  setLang(currentLang);
 
   /* ---------- LANGUAGE TOGGLE ---------- */
   const langToggle = document.getElementById('langToggle');
