@@ -111,9 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  /* ---------- AUTO-DETECT BROWSER LANGUAGE ---------- */
-  const browserLang = (navigator.language || navigator.userLanguage || 'ja').slice(0, 2);
-  let currentLang = browserLang === 'ja' ? 'ja' : 'en';
+  /* ---------- AUTO-DETECT LANGUAGE ---------- */
+  function detectLang() {
+    const path = location.pathname;
+    // /en path always wins
+    if (path === '/en' || path === '/en/') return 'en';
+    // Browser language fallback
+    const browserLang = (navigator.language || navigator.userLanguage || 'ja').slice(0, 2);
+    return browserLang === 'ja' ? 'ja' : 'en';
+  }
+
+  let currentLang = detectLang();
 
   function setLang(lang) {
     currentLang = lang;
@@ -132,6 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
         el.href = localizedLinks[key][lang];
       }
     });
+    /* Update URL to match language */
+    const newPath = lang === 'en' ? '/en' : '/';
+    if (location.pathname !== newPath) {
+      history.pushState(null, '', newPath);
+    }
   }
 
   /* Apply initial language */
