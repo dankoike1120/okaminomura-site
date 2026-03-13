@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>狼ノ村 ─ 丹波山村を舞台にした体験型マーダーミステリーシリーズ</title>
-  <meta name="description" content="東京から2時間の秘境・丹波山村。泊まって、歩いて、騙し合う──「狼ノ村」は、本物の村を舞台にした体験型マーダーミステリーシリーズです。">
-  <meta name="theme-color" content="#0D0D0D">
+  <title>狼ノ村 ─ 丹波山村イマーシブプロジェクト</title>
+  <meta name="description" content="東京から2時間の秘境・丹波山村。本物の村を舞台にした体験型マーダーミステリーシリーズ「狼ノ村」公式サイト。">
+  <meta name="theme-color" content="#FAFAFA">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,33 +16,33 @@
   <!-- ========== LOADING SCREEN ========== -->
   <div id="loading" class="loading">
     <div class="loading__inner">
-      <p class="loading__pre-text">体験型マーダーミステリーシリーズ</p>
-      <div class="loading__logo-wrap">
-        <div class="loading__logo-glow"></div>
-        <img src="images/logo_okami_no_mori (1).png" alt="狼ノ村" class="loading__logo" width="340" height="170">
+      <p class="loading__label">OKAMI NO MURA</p>
+      <div class="loading__brush">
+        <div class="loading__brush-stroke"></div>
       </div>
-      <p class="loading__post-text">── 丹波山村 ──</p>
-      <div class="loading__bar">
-        <div class="loading__bar-fill"></div>
-      </div>
+      <p class="loading__sub" data-i18n="loading_sub">丹波山村イマーシブプロジェクト</p>
     </div>
   </div>
 
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="header__inner">
-      <a href="#hero" class="header__logo">
-        <img src="images/logo_okami_no_mori (1).png" alt="狼ノ村" width="120" height="40">
-      </a>
-      <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#hero" class="header__logo" data-i18n="header_logo">狼ノ村</a>
+      <div class="header__right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__label" data-i18n="lang_label">EN</span>
+        </button>
+        <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
     <nav class="header__nav" id="headerNav">
       <ul class="header__nav-list">
-        <li><a href="#concept" data-nav>コンセプト</a></li>
-        <li><a href="#events" data-nav>シリーズ</a></li>
-        <li><a href="#tabayama" data-nav>丹波山村</a></li>
+        <li><a href="#news" data-nav>News</a></li>
+        <li><a href="#concept" data-nav>Concept</a></li>
+        <li><a href="#series" data-nav>Series</a></li>
+        <li><a href="#tabayama" data-nav>Tabayama</a></li>
       </ul>
     </nav>
   </header>
@@ -51,182 +51,202 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero" id="hero">
-      <div class="hero__bg">
-        <img src="images/kv_pattern_b.png" alt="" class="hero__bg-img" loading="eager">
-        <div class="hero__overlay"></div>
+      <div class="hero__kv">
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/kv_dynamic_h.png">
+          <img src="images/kv_dynamic_v.png" alt="狼ノ村 キービジュアル" class="hero__kv-img">
+        </picture>
       </div>
-      <div class="hero__content">
-        <p class="hero__sub fade-up">丹波山村を舞台にした、体験型マーダーミステリーシリーズ</p>
-        <h1 class="hero__title fade-up" style="animation-delay:.3s">
-          <span class="hero__title-line">この村には、</span>
-          <span class="hero__title-line hero__title-accent">まだ語られていない物語がある。</span>
+      <div class="hero__text">
+        <p class="hero__en">OKAMI NO MURA</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line" data-i18n="hero_line1">その村には、</span>
+          <span class="hero__title-line" data-i18n="hero_line2">まだ語られていない</span>
+          <span class="hero__title-line" data-i18n="hero_line3">物語がある。</span>
         </h1>
-        <p class="hero__desc fade-up" style="animation-delay:.6s">
-          泊まって、歩いて、騙し合う──<br>
-          東京最後の秘境で始まる、もうひとつの人生。
-        </p>
-        <div class="hero__scroll fade-up" style="animation-delay:1s">
+        <div class="hero__divider"></div>
+        <p class="hero__desc" data-i18n="hero_desc">狼伝承の残る村で起こる<br>人と狼のミステリーシリーズ</p>
+      </div>
+      <div class="hero__scroll-wrap">
+        <div class="hero__scroll">
           <span>Scroll</span>
           <div class="hero__scroll-line"></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== CONCEPT ========== -->
-    <section class="concept" id="concept">
-      <div class="concept__bg-wrap">
-        <img src="images/wolf_forest_main.jpg" alt="" class="concept__bg-img" loading="lazy">
-        <div class="concept__bg-overlay"></div>
-      </div>
+    <!-- ========== NEWS ========== -->
+    <section class="news" id="news">
       <div class="container">
-        <p class="section-label reveal">CONCEPT</p>
-        <h2 class="section-title reveal" style="--delay:.15s">
-          あなたは「観客」じゃない。<br>物語の、当事者だ。
-        </h2>
-        <div class="concept__body reveal" style="--delay:.3s">
-          <p>
-            新宿から約2時間。街灯のない山道を抜けた先に、<br>
-            人口わずか500人の村──丹波山村がある。<br>
-            ここで一夜だけ、もう一つの「人生」が始まる。
-          </p>
-          <p>
-            「狼ノ村」は、この秘境を舞台にした体験型マーダーミステリーシリーズ。<br>
-            あなたに渡されるのは、名前と過去と秘密。<br>
-            村を歩き、焚き火を囲み、誰かと語り合う。<br>
-            その会話の裏で、ひとつの事件の真相が動いている。
-          </p>
-          <p>
-            画面の中の物語じゃない。台本通りの体験でもない。<br>
-            ここでは、あなた自身が物語を動かす「登場人物」になる。<br>
-            舞台も事件も異なる複数の物語──<br>
-            どの作品からでも、あなたの一歩を踏み出してほしい。
-          </p>
+        <div class="section-header reveal">
+          <span class="section-en">News</span>
+          <h2 class="section-title" data-i18n="news_title">お知らせ</h2>
+        </div>
+        <ul class="news__list reveal" style="--delay:.2s">
+          <li class="news__item">
+            <time class="news__date">2026.03.14</time>
+            <span class="news__tag news__tag--info">INFO</span>
+            <p class="news__text" data-i18n="news_1">「狼ノ村」ブランドサイトを公開しました</p>
+          </li>
+          <li class="news__item">
+            <time class="news__date">2026.03.01</time>
+            <span class="news__tag news__tag--event">EVENT</span>
+            <p class="news__text" data-i18n="news_2">Vol.3「狼ノ森」5月開催決定 ─ 参加者募集開始</p>
+          </li>
+          <li class="news__item">
+            <time class="news__date">2025.12.15</time>
+            <span class="news__tag news__tag--report">REPORT</span>
+            <p class="news__text" data-i18n="news_3">Vol.2「狼ノ宴」開催レポートを公開しました</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== LATEST EVENT ========== -->
+    <section class="latest" id="latest">
+      <div class="latest__bg"></div>
+      <div class="container">
+        <div class="section-header section-header--light reveal">
+          <span class="section-en">Latest Event</span>
+          <h2 class="section-title" data-i18n="latest_title">最新イベント</h2>
+        </div>
+        <div class="latest__card reveal" style="--delay:.2s">
+          <div class="latest__card-img">
+            <img src="images/hero_top.jpg" alt="狼ノ森" loading="lazy">
+            <span class="latest__card-vol">Vol.3</span>
+          </div>
+          <div class="latest__card-body">
+            <span class="latest__card-badge" data-i18n="latest_badge">参加者募集中</span>
+            <h3 class="latest__card-title" data-i18n="title_mori">狼ノ森</h3>
+            <p class="latest__card-sub" data-i18n="sub_mori">OKAMI NO MORI</p>
+            <p class="latest__card-text" data-i18n="latest_text">本物の森で一泊二日。焚き火と星空の下、<br>嘘をつき、見破り、信じる──<br>身体ごと物語に入り込む、リアル人狼体験。</p>
+            <div class="latest__card-info" data-i18n="latest_info"><p><strong>2026年 5月24日（土）〜 25日（日）</strong></p><p>山梨県丹波山村 ─ 一泊二日</p></div>
+            <a href="#" class="btn btn--crimson">
+              <span data-i18n="latest_cta">イベント詳細を見る</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== EVENTS (SERIES) ========== -->
-    <section class="events" id="events">
+    <!-- ========== CONCEPT ========== -->
+    <section class="concept" id="concept">
       <div class="container">
-        <p class="section-label reveal">EVENTS</p>
-        <h2 class="section-title reveal" style="--delay:.15s">
-          物語は、一つではない
-        </h2>
-        <p class="events__intro reveal" style="--delay:.25s">
-          「狼ノ村」は、舞台も事件も異なる複数の物語で構成されるシリーズ。<br>
-          どの作品からでも参加OK──それぞれが独立した体験です。<br>
-          気になる物語から、あなたの一歩を踏み出してください。
-        </p>
-        <div class="events__grid">
+        <div class="section-header reveal">
+          <span class="section-en">Concept</span>
+          <h2 class="section-title" data-i18n="concept_title">コンセプト</h2>
+        </div>
+        <div class="concept__body">
+          <div class="concept__text reveal" style="--delay:.2s">
+            <p class="concept__lead" data-i18n="concept_lead">人と狼が共存する村。<br>だが狼は、守護者なのか、<br>それとも試す存在なのか。</p>
+            <p data-i18n="concept_p1">新宿から約2時間。街灯のない山道を抜けた先に、<br>人口わずか500人の村──丹波山村がある。<br>この村には、古くから狼にまつわる伝承が息づいている。</p>
+            <p data-i18n="concept_p2">「狼ノ村」は、その伝承を物語の核に据えた<br>没入型シアターシリーズ。<br>あなたに渡されるのは、名前と過去と秘密。</p>
+            <p data-i18n="concept_p3">村を歩き、焚き火を囲み、誰かと語り合う。<br>あなたは「観客」じゃない。<br>物語の、当事者だ。</p>
+          </div>
+          <div class="concept__visual reveal" style="--delay:.35s">
+            <img src="images/wolf_forest_main.jpg" alt="丹波山村の風景" loading="lazy">
+            <div class="concept__visual-border"></div>
+          </div>
+        </div>
+      </div>
+      <svg class="concept__ink" viewBox="0 0 120 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="80" r="25" fill="#000" opacity=".04"/>
+        <circle cx="80" cy="180" r="10" fill="#000" opacity=".03"/>
+        <circle cx="110" cy="300" r="40" fill="#000" opacity=".025"/>
+        <circle cx="60" cy="350" r="6" fill="#000" opacity=".04"/>
+      </svg>
+    </section>
 
-          <!-- Vol.1 狼ノ村 -->
-          <a href="#" class="event-card event-card--link reveal" style="--delay:.15s">
-            <div class="event-card__img-wrap">
-              <img src="images/series_okami_mura.jpg" alt="狼ノ村" class="event-card__img" loading="lazy">
-              <div class="event-card__img-overlay"></div>
-              <span class="event-card__vol">Vol.1</span>
+    <!-- ========== SERIES ========== -->
+    <section class="series" id="series">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-en">Series</span>
+          <h2 class="section-title" data-i18n="series_title">シリーズ</h2>
+        </div>
+        <p class="series__intro reveal" style="--delay:.15s" data-i18n="series_intro">舞台も事件も異なる、複数の独立した物語。<br>どの作品からでも参加できます。</p>
+        <div class="series__grid">
+
+          <!-- Vol.1 -->
+          <a href="#" class="series-card reveal" style="--delay:.15s">
+            <div class="series-card__img">
+              <img src="images/series_okami_mura.jpg" alt="狼ノ村" loading="lazy">
+              <span class="series-card__vol">Vol.1</span>
             </div>
-            <div class="event-card__body">
-              <span class="event-card__badge event-card__badge--ended">終了</span>
-              <h3 class="event-card__title">狼ノ村</h3>
-              <p class="event-card__sub">OKAMI NO MURA</p>
-              <p class="event-card__text">
-                すべてはここから始まった。霧に包まれた山村を舞台に、村全体を巡る大規模マーダーミステリー。古民家の住人、消えた記録、封印された祠──すべてが手がかりになる。
-              </p>
-              <span class="event-card__link-text">詳細を見る →</span>
+            <div class="series-card__body">
+              <span class="series-card__badge series-card__badge--ended" data-i18n="badge_ended">終了</span>
+              <h3 class="series-card__title" data-i18n="title_mura">狼ノ村</h3>
+              <p class="series-card__sub" data-i18n="sub_mura">OKAMI NO MURA</p>
+              <p class="series-card__text" data-i18n="series_v1_text">霧に包まれた山村を舞台に、村全体を巡る大規模マーダーミステリー。古民家の住人、消えた記録、封印された祠──すべてが手がかりになる。</p>
+              <span class="series-card__link" data-i18n="series_link">詳細を見る →</span>
             </div>
           </a>
 
-          <!-- Vol.2 狼ノ宴 -->
-          <a href="#" class="event-card event-card--link reveal" style="--delay:.3s">
-            <div class="event-card__img-wrap">
-              <img src="images/series_okami_utage.jpg" alt="狼ノ宴" class="event-card__img" loading="lazy">
-              <div class="event-card__img-overlay"></div>
-              <span class="event-card__vol">Vol.2</span>
+          <!-- Vol.2 -->
+          <a href="#" class="series-card reveal" style="--delay:.3s">
+            <div class="series-card__img">
+              <img src="images/series_okami_utage.jpg" alt="狼ノ宴" loading="lazy">
+              <span class="series-card__vol">Vol.2</span>
             </div>
-            <div class="event-card__body">
-              <span class="event-card__badge event-card__badge--ended">終了</span>
-              <h3 class="event-card__title">狼ノ宴</h3>
-              <p class="event-card__sub">OKAMI NO UTAGE</p>
-              <p class="event-card__text">
-                豪華な宴席が舞台。料理と酒を楽しみながら、隣の人物の「本当の目的」を探る。華やかさの裏に潜む、もうひとつの物語。
-              </p>
-              <span class="event-card__link-text">詳細を見る →</span>
+            <div class="series-card__body">
+              <span class="series-card__badge series-card__badge--ended" data-i18n="badge_ended">終了</span>
+              <h3 class="series-card__title" data-i18n="title_utage">狼ノ宴</h3>
+              <p class="series-card__sub" data-i18n="sub_utage">OKAMI NO UTAGE</p>
+              <p class="series-card__text" data-i18n="series_v2_text">豪華な宴席が舞台。料理と酒を楽しみながら、隣の人物の「本当の目的」を探る。華やかさの裏に潜む、もうひとつの物語。</p>
+              <span class="series-card__link" data-i18n="series_link">詳細を見る →</span>
             </div>
           </a>
 
-          <!-- Vol.3 狼ノ森 -->
-          <a href="#" class="event-card event-card--link reveal" style="--delay:.45s">
-            <div class="event-card__img-wrap">
-              <img src="images/hero_top.jpg" alt="狼ノ森" class="event-card__img" loading="lazy">
-              <div class="event-card__img-overlay"></div>
-              <span class="event-card__vol">Vol.3</span>
+          <!-- Vol.3 -->
+          <a href="#" class="series-card reveal" style="--delay:.45s">
+            <div class="series-card__img">
+              <img src="images/hero_top.jpg" alt="狼ノ森" loading="lazy">
+              <span class="series-card__vol">Vol.3</span>
             </div>
-            <div class="event-card__body">
-              <span class="event-card__badge event-card__badge--live">開催中</span>
-              <h3 class="event-card__title">狼ノ森</h3>
-              <p class="event-card__sub">OKAMI NO MORI</p>
-              <p class="event-card__text">
-                本物の森で一泊二日。焚き火と星空の下、嘘をつき、見破り、信じる──身体ごと物語に入り込む、リアル人狼体験の最新作。
-              </p>
-              <span class="event-card__link-text">詳細を見る →</span>
+            <div class="series-card__body">
+              <span class="series-card__badge series-card__badge--live" data-i18n="badge_upcoming">開催予定</span>
+              <h3 class="series-card__title" data-i18n="title_mori">狼ノ森</h3>
+              <p class="series-card__sub" data-i18n="sub_mori">OKAMI NO MORI</p>
+              <p class="series-card__text" data-i18n="series_v3_text">本物の森で一泊二日。焚き火と星空の下、嘘をつき、見破り、信じる──身体ごと物語に入り込む、リアル人狼体験の最新作。</p>
+              <span class="series-card__link" data-i18n="series_link">詳細を見る →</span>
             </div>
           </a>
 
         </div>
-        <p class="events__note reveal" style="--delay:.5s">
-          ※ 各作品は独立した物語です。どのVolからでもお楽しみいただけます。
-        </p>
       </div>
     </section>
 
     <!-- ========== TABAYAMA ========== -->
     <section class="tabayama" id="tabayama">
-      <div class="tabayama__bg-wrap">
-        <img src="images/wolf_forest_main.jpg" alt="" class="tabayama__bg-img" loading="lazy">
-        <div class="tabayama__bg-overlay"></div>
-      </div>
+      <div class="tabayama__bg"></div>
       <div class="container">
-        <p class="section-label reveal">TABAYAMA</p>
-        <h2 class="section-title reveal" style="--delay:.15s">
-          東京から2時間の秘境、<br>丹波山村
-        </h2>
-        <div class="tabayama__body">
-          <div class="tabayama__text reveal" style="--delay:.3s">
-            <p>
-              山梨県北都留郡丹波山村。人口わずか500人。<br>
-              東京都との県境に位置しながら、深い山と清流に囲まれた<br>
-              「東京最後の秘境」と呼ばれる村。
-            </p>
-            <p>
-              街灯のない夜道、満天の星空、<br>
-              朝靄に霞む山々、川のせせらぎ──<br>
-              ここには、物語が生まれる「空気」がある。
-            </p>
-            <p>
-              この村だからこそ成り立つ体験。<br>
-              この村でしか味わえない没入感。<br>
-              「狼ノ村」の世界観は、丹波山村そのものが創り出している。
-            </p>
+        <div class="section-header section-header--light reveal">
+          <span class="section-en">Tabayama</span>
+          <h2 class="section-title" data-i18n="tabayama_title">丹波山村</h2>
+        </div>
+        <div class="tabayama__content">
+          <div class="tabayama__text reveal" style="--delay:.2s">
+            <p class="tabayama__lead" data-i18n="tabayama_lead">東京から2時間の秘境。<br>物語が生まれる村。</p>
+            <p data-i18n="tabayama_p1">山梨県北都留郡丹波山村。人口わずか500人。<br>東京都との県境に位置しながら、<br>深い山と清流に囲まれた秘境。</p>
+            <p data-i18n="tabayama_p2">街灯のない夜道、満天の星空、<br>朝靄に霞む山々、川のせせらぎ──<br>この村だからこそ成り立つ体験がある。</p>
           </div>
-          <div class="tabayama__info reveal" style="--delay:.45s">
-            <div class="tabayama__info-card">
-              <h3 class="tabayama__info-title">アクセス</h3>
-              <ul class="tabayama__info-list">
-                <li>
-                  <span class="tabayama__info-label">電車</span>
-                  <span>JR青梅線「奥多摩駅」よりバス約40分</span>
-                </li>
-                <li>
-                  <span class="tabayama__info-label">車</span>
-                  <span>中央道「勝沼IC」より約60分</span>
-                </li>
-                <li>
-                  <span class="tabayama__info-label">新宿から</span>
-                  <span>約2時間（電車+バス）</span>
-                </li>
-              </ul>
-            </div>
+          <div class="tabayama__access reveal" style="--delay:.35s">
+            <h3 class="tabayama__access-title">Access</h3>
+            <ul class="tabayama__access-list">
+              <li>
+                <span class="tabayama__access-label" data-i18n="access_train">電車</span>
+                <span data-i18n="access_train_detail">JR青梅線「奥多摩駅」よりバス約40分</span>
+              </li>
+              <li>
+                <span class="tabayama__access-label" data-i18n="access_car">車</span>
+                <span data-i18n="access_car_detail">中央道「勝沼IC」より約60分</span>
+              </li>
+              <li>
+                <span class="tabayama__access-label" data-i18n="access_shinjuku">新宿から</span>
+                <span data-i18n="access_shinjuku_detail">約2時間（電車+バス）</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -237,16 +257,16 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__logo">
-        <img src="images/logo_okami_no_mori (1).png" alt="狼ノ村" width="160" height="53" loading="lazy">
-      </div>
+      <p class="footer__logo" data-i18n="header_logo">狼ノ村</p>
+      <p class="footer__en">OKAMI NO MURA</p>
       <nav class="footer__nav">
-        <a href="#concept">コンセプト</a>
-        <a href="#events">シリーズ</a>
-        <a href="#tabayama">丹波山村</a>
+        <a href="#news">News</a>
+        <a href="#concept">Concept</a>
+        <a href="#series">Series</a>
+        <a href="#tabayama">Tabayama</a>
       </nav>
       <div class="footer__copy">
-        <p>&copy; 2026 狼ノ村 All Rights Reserved.</p>
+        <p>&copy; 2026 OKAMI NO MURA All Rights Reserved.</p>
       </div>
     </div>
   </footer>
