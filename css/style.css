@@ -177,6 +177,12 @@ ul { list-style: none; }
   transition: opacity .5s ease;
 }
 
+.header__logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .header.is-scrolled .header__logo {
   opacity: 1;
 }
@@ -1039,6 +1045,13 @@ ul { list-style: none; }
   letter-spacing: .25em;
   color: var(--c-text);
   margin-bottom: 4px;
+}
+
+.footer__logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .footer__en {
