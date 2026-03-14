@@ -133,6 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerHTML = t[key];
       }
     });
+    /* Update localized logos */
+    document.querySelectorAll('[data-logo-ja]').forEach(el => {
+      const src = el.getAttribute('data-logo-' + lang);
+      if (src) el.src = src;
+    });
     /* Update localized links */
     document.querySelectorAll('[data-link]').forEach(el => {
       const key = el.getAttribute('data-link');
